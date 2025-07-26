@@ -2,16 +2,21 @@
 
 Form::Form(const std::string &name, int gradeToSign, int gradeToExecute)
 	: name(name), isSigned(false), gradeToSign(gradeToSign), gradeToExecute(gradeToExecute) {
-	if (gradeToSign < 1 || gradeToExecute < 1)
+	if (this->gradeToSign < 1 || this->gradeToExecute < 1)
 		throw GradeTooHighException();
-	if (gradeToSign > 150 || gradeToExecute > 150)
+	if (this->gradeToSign > 150 || this->gradeToExecute > 150)
 		throw GradeTooLowException();
 }
 
 Form::~Form() {}
 
 Form::Form(const Form &other)
-	: name(other.name), isSigned(other.isSigned), gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute) {}
+	: name(other.name), isSigned(other.isSigned), gradeToSign(other.gradeToSign), gradeToExecute(other.gradeToExecute) {
+	if (this->gradeToSign < 1 || this->gradeToExecute < 1)
+		throw GradeTooHighException();
+	if (this->gradeToSign > 150 || this->gradeToExecute > 150)
+		throw GradeTooLowException();
+}
 
 Form &Form::operator=(const Form &other) {
 	if (this != &other)
