@@ -15,6 +15,7 @@ class Form {
 		const int gradeToExecute;
 
 	public:
+		Form();
 		Form(const std::string &name, int gradeToSign, int gradeToExecute);
 		~Form();
 

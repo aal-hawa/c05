@@ -13,6 +13,7 @@ class Bureaucrat {
 		int grade;
 
 	public:
+		Bureaucrat();
 		Bureaucrat(const std::string &name, int grade);
 		~Bureaucrat();
 
