@@ -5,7 +5,7 @@
 #include <stdexcept>
 
 
-class Form; // Forward declaration to avoid circular dependency
+class Form;
 
 class Bureaucrat {
 	private:
