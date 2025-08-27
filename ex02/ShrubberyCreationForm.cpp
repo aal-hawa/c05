@@ -23,6 +23,11 @@ ShrubberyCreationForm::~ShrubberyCreationForm() {}
 void ShrubberyCreationForm::execute(const Bureaucrat &executor) const {
 	checkExecution(executor);
 	std::ofstream out((target + "_shrubbery").c_str());
+	if (!out.is_open())
+	{
+		std::cerr << "Failed to open the " << target << "_shrubbery" << std::endl;
+		return;
+	}
 	// out << "ASCII TREES 🌲🌲🌲" << std::endl;
 	out << "       _-_       " << std::endl;
 	out << "    /~~   ~~\\    " << std::endl;

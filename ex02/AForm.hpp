@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include "Bureaucrat.hpp"
 
-class Bureaucrat; // Forward declaration to avoid circular dependency
+class Bureaucrat; 
 
 class AForm {
 	protected:

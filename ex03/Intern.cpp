@@ -6,13 +6,13 @@
 Intern::Intern() {}
 Intern::~Intern() {}
 Intern::Intern(const Intern& other) {
-	(void)other; // Unused parameter
+	(void)other;
 }
 
 Intern& Intern::operator=(const Intern& other)
 {
 	(void)other;
-	return *this; // No specific assignment logic needed
+	return *this;
 }
 
 static AForm* createShrubbery(const std::string& target) {
