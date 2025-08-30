@@ -27,12 +27,11 @@ static AForm* createPresidential(const std::string& target) {
 }
 
 AForm* Intern::makeForm(const std::string& formName, const std::string& target) {
-	typedef AForm* (*FormCreator)(const std::string& target);
 
 
 	struct FormEntry {
 		std::string name;
-		FormCreator create;
+		AForm* (*create)(const std::string& target);
 	};
 	FormEntry forms[] = {
 		{"shrubbery creation", &createShrubbery},
